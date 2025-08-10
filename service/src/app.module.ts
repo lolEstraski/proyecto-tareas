@@ -16,11 +16,11 @@ import { UsersModule } from './users.module';
       imports: [ConfigModule],
       useFactory: (configService: ConfigService) => ({
         type: 'postgres',
-        host: configService.get('DB_HOST', 'dpg-d2bg1ijuibrs73fiqn90-a'),
+        host: configService.get('DB_HOST', 'localhost'),
         port: configService.get<number>('DB_PORT', 5432),
         username: configService.get('DB_USERNAME', 'tasks'),
         password: configService.get('DB_PASSWORD', 'h6kKePc3hXr4mRoe21AI8Gb82X5h6X4s'),
-        database: configService.get('DB_NAME', 'task_manager_osby'),
+        database: configService.get('DB_NAME', 'task_manager'), 
         entities: [Task, User],
         synchronize: configService.get('NODE_ENV') !== 'production',
         logging: configService.get('NODE_ENV') === 'development',

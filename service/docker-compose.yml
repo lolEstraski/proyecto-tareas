@@ -5,8 +5,8 @@ services:
     container_name: task-manager-db
     restart: always
     environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: password
+      POSTGRES_USER: tasks
+      POSTGRES_PASSWORD: h6kKePc3hXr4mRoe21AI8Gb82X5h6X4s
       POSTGRES_DB: task_manager
     ports:
       - "5432:5432"
@@ -18,8 +18,8 @@ services:
     container_name: task-manager-test-db
     restart: always
     environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: password
+      POSTGRES_USER: tasks
+      POSTGRES_PASSWORD: h6kKePc3hXr4mRoe21AI8Gb82X5h6X4s
       POSTGRES_DB: task_manager_test
     ports:
       - "5433:5432"
