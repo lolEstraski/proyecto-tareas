@@ -1,6 +1,6 @@
 # Task Manager API
 
-Una API REST completa para gestión de tareas construida con NestJS, TypeORM y PostgreSQL.
+Una API REST completa para gestión de tareas construida con NestJS, TypeORM y PostgreSQL, la cual consta como un block en el cual puedes listar tus tareas , y su respectivo crud en la cual podras ver tus tareas pendentes , tareas completadas, tambien con un login y un registrar usuarios todo encryptado con  jwt para la seguridad 
 ## 🛠️ Stack Tecnológico
 - **Framework**: NestJS
 - **Base de datos**: PostgreSQL
@@ -19,28 +19,21 @@ git clone https://github.com/lolEstraski/wagonPrueba-.git
 npm install
 ```
 ### 3. Configurar variables de entorno
-Crear un archivo `.env` en la raíz del proyecto  si quiere  
+Crear un archivo `.env` en la raíz del proyecto  service  haga `cd service` en caso  de ser desplegado  saltar este paso
 ```env
 # Database
 DB_HOST=localhost
 DB_PORT=5432
-DB_USERNAME=postgres
-DB_PASSWORD=password
+DB_USERNAME=tasks
+DB_PASSWORD=h6kKePc3hXr4mRoe21AI8Gb82X5h6X4s
 DB_DATABASE=task_manager
-
-
-      host: this.getValue('POSTGRES_HOST'),
-      port: parseInt(this.getValue('POSTGRES_PORT')),
-      username: this.getValue('POSTGRES_USER'),
-      password: this.getValue('POSTGRES_PASSWORD'),
-      database: this.getValue('POSTGRES_DATABASE'),
 
 # JWT
 JWT_SECRET=tu-jwt-secret-muy-seguro
 JWT_EXPIRES_IN=7d
 
 # App
-PORT=3000
+PORT=3001
 NODE_ENV=development
 ```
 
@@ -69,56 +62,33 @@ docker-compose down -v
 ```bash
 # Tests unitarios
 npm run test
-# Tests e2e
-npm run test:e2e
 # Coverage
 npm run test:cov
 ```
 
-## 📝 Scripts Disponibles
-
-```bash
-npm run start          # Iniciar en modo producción
-npm run start:dev      # Iniciar en modo desarrollo
-npm run start:debug    # Iniciar en modo debug
-npm run build          # Construir para producción
-npm run lint           # Ejecutar linter
-npm run format         # Formatear código
-npm run test           # Ejecutar tests
+### 3. Configurar mobile
+haga `cd mobile` 
+```
+flutter pub get
+flutter run
 ```
 
-## 🔄 Comandos TypeORM
+## 📌 Endpoints
 
-```bash
-# Generar migración
-npm run typeorm:generate-migration -- NombreMigracion
+### 🔐 Autenticación
+- `POST /auth/register` - Registrar usuario
+- `POST /auth/login` - Iniciar sesión
 
-# Ejecutar migraciones
-npm run typeorm:run
+### 📝 Tareas *(requieren token JWT)*
+- `GET /tasks` - Obtener todas tus tareas
+- `GET /tasks/:id` - Obtener una tarea específica
+- `POST /tasks` - Crear nueva tarea
+- `PUT /tasks/:id` - Actualizar tarea
+- `DELETE /tasks/:id` - Eliminar tarea
+ Todos los endpoints de tareas requieren autenticación (envía token en el header `Authorization`)
 
-# Revertir migración
-npm run typeorm:revert
-
-# Mostrar migraciones
-npm run typeorm:show
-```
-
-## 🌍 Variables de Entorno
-
-| Variable | Descripción | Valor por defecto |
-|----------|-------------|-------------------|
-| `PORT` | Puerto del servidor | `3000` |
-| `NODE_ENV` | Ambiente de ejecución | `development` |
-| `DB_HOST` | Host de la base de datos | `localhost` |
-| `DB_PORT` | Puerto de la base de datos | `5432` |
-| `DB_USERNAME` | Usuario de la base de datos | `postgres` |
-| `DB_PASSWORD` | Contraseña de la base de datos | `password` |
-| `DB_DATABASE` | Nombre de la base de datos | `task_manager` |
-| `JWT_SECRET` | Secreto para JWT | - |
-| `JWT_EXPIRES_IN` | Tiempo de expiración del JWT | `7d` |
-
-## 📄 Licencia
-Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
+### 3. link backeed desplegado
+link de backend  deslegado  'https://proyecto-tareas-tjdj.onrender.com'
 
 ## 👥 Carlos Andres Ortegon Tique
 

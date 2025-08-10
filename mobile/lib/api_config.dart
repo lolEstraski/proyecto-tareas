@@ -1,6 +1,9 @@
 class ApiConfig {
   // Cambia esta URL cuando despliegues tu backend
   static const String baseUrl = 'https://proyecto-tareas-tjdj.onrender.com'; 
+  // Cambia esta URL cuando despliegues tu backend
+  //static const String baseUrl = '192.168.1.10:3000';  ipconfig con tu dirección IP local
+  
   
   static const String loginEndpoint = '/auth/login';
   static const String registerEndpoint = '/auth/register';
