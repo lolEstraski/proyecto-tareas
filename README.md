@@ -1,6 +1,6 @@
 # Task Manager API
 
-Una API REST completa para gestión de tareas construida con NestJS, TypeORM y PostgreSQL, la cual consta como un block en el cual puedes listar tus tareas , y su respectivo crud en la cual podras ver tus tareas pendentes , tareas completadas, tambien con un login y un registrar usuarios todo encryptado con  jwt para la seguridad 
+Una API REST completa para gestión de tareas construida con NestJS, TypeORM y PostgreSQL, la cual consta como un block en el cual puedes listar tus tareas , y su respectivo crud en la cual podras ver tus tareas pendientes , tareas completadas, tambien con un login y un registrar usuarios todo encryptado con  jwt para la seguridad 
 ## 🛠️ Stack Tecnológico
 - **Framework**: NestJS
 - **Base de datos**: PostgreSQL
@@ -89,6 +89,23 @@ flutter run
 
 ### 3. link backeed desplegado
 link de backend  deslegado  'https://proyecto-tareas-tjdj.onrender.com'
+
+### 4. despliegue 
+<img width="2167" height="1269" alt="image" src="https://github.com/user-attachments/assets/52ed1b80-4c46-49e3-8ef9-6f2fb8bd3cb0" />
+### 5. aplicacion funcionando 
+<img width="1251" height="780" alt="image" src="https://github.com/user-attachments/assets/6df28147-8a90-45c7-925f-495e63f6c3ed" />
+<img width="1240" height="650" alt="image" src="https://github.com/user-attachments/assets/594175d0-e9c6-469c-8496-2861c21c4023" />
+<img width="1239" height="632" alt="image" src="https://github.com/user-attachments/assets/6b1ae7d0-ac7d-4891-8070-cf883dc606b7" />
+<img width="1233" height="455" alt="image" src="https://github.com/user-attachments/assets/d3c18897-42b0-40bb-baa2-cb89faeeda0b" />
+<img width="1247" height="461" alt="image" src="https://github.com/user-attachments/assets/855d348a-3915-439d-9198-4375afbcc9d2" />
+<img width="1239" height="347" alt="image" src="https://github.com/user-attachments/assets/e2d67f72-9399-4a62-94a5-4854080a24f1" />
+<img width="1222" height="491" alt="image" src="https://github.com/user-attachments/assets/06d75265-8b3d-4873-b5ed-54a50caf4543" />
+
+##  decision tecnica
+una de las decisiones  tomadas en el transcurso del proyecto  es relaizar este patron  Test Driven Development (TDD) método de codificación en el que primero se escribe una prueba que falla, luego se escribe el código para que supere la prueba de desarrollo y se limpia el código. Este proceso se recicla para una nueva característica o cambio. haciendo un adelanto de como debe funcionar  nuestra apliacion haciendo dichas pruebas nos podes ahorra mucho trabajo ya que  son muy especificas  y son de gran utilidad, antes de hacer una cantidad de codigo  regado. asi simplificando  las cosas , otra decision es la implemntacion de jwt para todo  para que solo el usuario con su respectivo token pueda ver sus tareas, modificarlas. y es parte vital de la seguridad  toda aplicacion deberia tener.
+
+## Resumen de la IA
+nos apoyamos de la IA  para mapear  o encontrar ciertos errores, y darnos algunas ideas, tam,bien ciertos errores  que no mirabamos simple vista, algunas correciones de nuestra idea para no quedarnos estancados siempre siguiendo  este patron  Estructura de Pruebas Completa DTOs, Validación de datos de entrada/salida Services: Lógica de negocio y manejo de errores Controllers: Endpoints HTTP y validaciones Entity: Modelo de datos con TypeORM ella nos colaboraba  cuando  algo estaba mal y tambien refactorizando codigo  construir algo  y para que fuera mas legible brindando  nuestras  propias ideas de como queriamos  que  saliera, tambien nos ayudo mucho ya que el framework de flutter no lo conocia muy bien  era algo dificil en alguno de los git commit  se ve que pedimos ayuda para refactorizar , en la parte del backend tenia conocimientos previos aun asi ciertas caracteristicas  se me escapan pero gracias a la ia logramois nuestro cometido  un aplicacion fncional, las ia.
 
 ## 👥 Carlos Andres Ortegon Tique
 
